@@ -1,7 +1,7 @@
 import MyList from './MyList'
 
 
-function Container(props) {
+function Container() {
     return <container><MyList
         header="Really epic list component"
         items={[
