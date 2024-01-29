@@ -2,13 +2,8 @@ import MyList from './MyList'
 import React, { useState } from 'react';
 
 
-function MyContainer() {
+function MyContainer(items) {
     
-    const [items, setItems] = useState([
-        { id: "1", text: "This is an item" },
-        { id: "2", text: "Also this"},
-    ]);
-
     const [text, setText] = useState('')
 
     const onClick = (e) => {
