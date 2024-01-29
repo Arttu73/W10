@@ -2,7 +2,7 @@ import MyList from './MyList'
 import React, { useState } from 'react';
 
 
-function Container() {
+function MyContainer() {
     const [items, setItems] = useState([
         { id: "1", text: "This is an item" },
         { id: "2", text: "Also this"},
@@ -26,18 +26,20 @@ function Container() {
         setNewItemText(e.target.value);
     }
 
-    return <container>
-        <textarea
-            value={newItemText}
-            onChange={textAreaChange}
-            placeholder="Enter new item text"
-        />
-        <button type="submit" onClick={onClick}></button>
-        <MyList
-                header="Really epic list component"
-                items={items}
-        />
-        </container>
+    return (
+        <div>
+            <textarea
+                value={newItemText}
+                onChange={textAreaChange}
+                placeholder="Enter new item text"
+            />
+            <button type="submit" onClick={onClick}></button>
+            <MyList
+                    header="Really epic list component"
+                    items={items}
+            />
+        </div>
+        )
 }
 
-export default Container;
+export default MyContainer;
