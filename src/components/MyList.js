@@ -5,7 +5,7 @@ function MyList({ header, items, updateItem }) {
     const itemsList = items.map(item =>
     <li 
         key={item.id.toString()} 
-        style={{ textDecoration: item.clicked ? 'line-through' : 'none' }}
+        style={{ textDecoration: item.clicked ? 'line-through' : '' }}
         onClick={() => updateItem(item.id)}
     >
         {item.text}
