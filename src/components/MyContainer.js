@@ -1,7 +1,7 @@
 import MyList from './MyList'
 
 
-function Container(list) {
+function Container(props) {
     return <container><MyList></MyList></container>
 }
 
