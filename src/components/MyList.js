@@ -8,7 +8,7 @@ function MyList(header, items) {
     </li>);
     return (
         <div>
-            <h2>{header1}</h2>
+            <h1>{header1}</h1>
             <ol>{itemsList}</ol>
         </div>
             );
