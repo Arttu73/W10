@@ -1,11 +1,11 @@
 import React from 'react';
 
-function MyList({ header, items }) {
+function MyList({ header, items, updateItem }) {
     const header1 = header;
     const itemsList = items.map(item =>
     <li 
         key={item.id.toString()} 
-        onClick={() => props.updateItem(item.id)}
+        onClick={() => updateItem(item.id)}
     >
         {item.text}
     </li>);

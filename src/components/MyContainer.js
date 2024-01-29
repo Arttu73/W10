@@ -33,9 +33,9 @@ function MyContainer() {
     return (
         <div>
             <MyList
-                updateItem={updateItem}
                 header="Really epic list component"
                 items={items}
+                updateItem={updateItem}
             />
             <textarea
                 value={text}
