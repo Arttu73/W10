@@ -3,7 +3,10 @@ import React from 'react';
 function MyList({ header, items }) {
     const header1 = header;
     const itemsList = items.map(item =>
-    <li key={item.id.toString()}>
+    <li 
+        key={item.id.toString()} 
+        onClick={() => items.updateItem(item.id)}
+    >
         {item.text}
     </li>);
     return (
