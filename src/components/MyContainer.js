@@ -12,14 +12,12 @@ function MyContainer() {
 
     const onClick = (e) => {
         e.preventDevault();
-        if (newItemText.trim() !== '') {
-            const newItem = {
-                id: (items.length + 1).toString(),
-                text: newItemText.trim()
-            };
-            setItems([...items, newItem]);
-            setNewItemText('');
+        const newItem = {
+            id: (items.length + 1).toString(),
+            text: newItemText.trim()
         };
+        setItems([...items, newItem]);
+        setText("");
     };
 
 
