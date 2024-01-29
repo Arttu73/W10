@@ -3,18 +3,19 @@ import React, { useState } from 'react';
 
 
 function MyContainer() {
+    
     const [items, setItems] = useState([
         { id: "1", text: "This is an item" },
         { id: "2", text: "Also this"},
     ]);
 
-    const [newItemText, setNewItemText] = useState('')
+    const [text, setText] = useState('')
 
     const onClick = (e) => {
         e.preventDevault();
         const newItem = {
             id: (items.length + 1).toString(),
-            text: newItemText.trim()
+            text: text.trim()
         };
         setItems([...items, newItem]);
         setText("");
@@ -28,7 +29,7 @@ function MyContainer() {
                     items={items}
             />
             <textarea
-                value={newItemText}
+                value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="Enter new item text"
             />
