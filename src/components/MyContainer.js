@@ -10,10 +10,15 @@ function MyContainer() {
     ]);
 
     const updateItem = (id) => {
-        setItems(items.map(item =>
-            style={ textDecoration: item.clicked ? 'line-through' : 'none' },
-            clicked={clicked: item.clicked ? false : true}
-            ))
+        setItems(items.map(item => {
+            if(item.clicked === true) {
+                style = { textDecoration: 'none'},
+                clicked = false
+            } else {
+                style = { textDecoration: 'line-through'},
+                clicked = true
+            }
+        }))
         
     }
     
