@@ -21,16 +21,16 @@ function MyContainer() {
             setNewItemText('');
         };
     };
-
+/*
     const textAreaChange = (e) => {
         setNewItemText(e.target.value);
     }
-
+*/
     return (
         <div>
             <textarea
                 value={newItemText}
-                onChange={textAreaChange}
+                //onChange={textAreaChange}
                 placeholder="Enter new item text"
             />
             <button type="submit" onClick={onClick}></button>
