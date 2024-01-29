@@ -5,7 +5,7 @@ function MyList({ header, items }) {
     const itemsList = items.map(item =>
     <li 
         key={item.id.toString()} 
-        onClick={() => items.updateItem(item.id)}
+        onClick={() => props.updateItem(item.id)}
     >
         {item.text}
     </li>);
