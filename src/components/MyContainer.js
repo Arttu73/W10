@@ -12,9 +12,9 @@ function MyContainer() {
     const updateItem = (id) => {
         setItems(items.map(item => {
             if(item.clicked === true) {
-                clicked = false
+                item.clicked = false
             } else {
-                clicked = true
+                item.clicked = true
             }
         }))
         
