@@ -12,7 +12,7 @@ function Container() {
 
     const onClick = (e) => {
         e.preventDevault();
-        if (newItemText.trim() != '') {
+        if (newItemText.trim() !== '') {
             const newItem = {
                 id: (items.length + 1).toString(),
                 text: newItemText.trim()
