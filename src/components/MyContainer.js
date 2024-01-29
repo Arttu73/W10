@@ -11,13 +11,8 @@ function MyContainer() {
 
     const updateItem = (id) => {
         setItems(items.map(item => {
-            if(item.clicked === true) {
-                item.clicked = false
-            } else {
-                item.clicked = true
-            }
-        }))
-        
+            item.id === id ? { ...item, clicked: !item.clicked } : item
+        }));  
     }
     
     const [text, setText] = useState('')
