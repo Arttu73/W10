@@ -1,9 +1,9 @@
 import React from 'react';
 
-function MyList(header, items) {
+function MyList({ header, items }) {
     const header1 = header;
     const itemsList = items.map(item =>
-    <li key={items.id.toString()}>
+    <li key={item.id.toString()}>
         {item.text}
     </li>);
     return (
