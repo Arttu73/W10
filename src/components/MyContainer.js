@@ -1,6 +1,6 @@
 import MyList from './MyList'
 import React, { useState } from 'react';
-
+//a
 
 function MyContainer() {
 
@@ -8,6 +8,7 @@ function MyContainer() {
         { id: "1", text: "This is an item", clicked: false },
         { id: "2", text: "Also this", clicked: false },
     ]);
+    const [text, setText] = useState('')
 
     const updateItem = (id) => {
         setItems(items.map(item => {
@@ -15,8 +16,7 @@ function MyContainer() {
         }));  
     }
     
-    const [text, setText] = useState('')
-
+    
     const onClick = () => {
         const newItem = {
             id: (items.length + 1).toString(),
@@ -26,7 +26,6 @@ function MyContainer() {
         setItems([...items, newItem]);
         setText('');
     };
-
 
     return (
         <div>
