@@ -21,25 +21,25 @@ function MyContainer() {
             setNewItemText('');
         };
     };
-/*
-    const textAreaChange = (e) => {
-        setNewItemText(e.target.value);
-    }
-*/
+
+    const textAreaChange = (event) => {
+        setNewItemText(event.target.value);
+    };
+
     return (
         <div>
-            <textarea
-                value={newItemText}
-                //onChange={textAreaChange}
-                placeholder="Enter new item text"
-            />
-            <button type="submit" onClick={onClick}></button>
             <MyList
                     header="Really epic list component"
                     items={items}
             />
+            <textarea
+                value={newItemText}
+                onChange={textAreaChange}
+                placeholder="Enter new item text"
+            />
+            <button type="submit" onClick={onClick}></button>
         </div>
-        )
+    );
 }
 
 export default MyContainer;
