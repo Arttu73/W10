@@ -1,14 +1,21 @@
 import './App.css';
 import MyContainer from './components/MyContainer';
-import MyList from './components/MyList'
-import {useState} from "react"
+import MyList from './components/MyList';
+import About from './components/About';
+import Header from './components/Header';
 
 function App() {
   return (
+    <Router>
     <div className="App">
-      <h1>Hello World!</h1>
-      <MyContainer/>
+      <Menu />
+      <Routes>
+        <Route path="/" element={<><Header /> <MyContainer /> </> } />
+        <Route path="/about" element={<><Header /> <About /> </> } />
+      </Routes>
+      <Footer />
     </div>
+  </Router>
   );
 }
 
